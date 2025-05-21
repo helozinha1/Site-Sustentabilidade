@@ -1,0 +1,268 @@
+/* Estilos específicos para a página inicial (Aprimorado) */
+.hero {
+    background: linear-gradient(135deg, #81c784 0%, #4caf50 100%);
+    color: white;
+    padding: 120px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: left;
+}
+
+.hero-content {
+    max-width: 550px;
+    padding: 20px;
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.3em;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-buttons .button {
+    display: inline-block;
+    padding: 14px 35px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    margin-right: 15px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+}
+
+.hero-image {
+    max-width: 450px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    animation: floatImage 5s ease-in-out infinite alternate;
+}
+
+@keyframes floatImage {
+    from { transform: translateY(0px); }
+    to { transform: translateY(-20px); }
+}
+
+.pilares {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #f9fbe7;
+}
+
+.pilares h2 {
+    font-size: 2.8em;
+    color: #558b2f;
+    margin-bottom: 50px;
+}
+
+.pilares-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.pilar {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pilar:hover {
+    transform: translateY(-10px);
+}
+
+.pilar i {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.agua-pilar i { color: #29b6f6; }
+.reciclagem-pilar i { color: #66bb6a; }
+.natureza-pilar i { color: #a1887f; }
+
+.pilar h3 {
+    color: #43a047;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+.pilar p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.saiba-mais {
+    display: inline-block;
+    text-decoration: none;
+    color: #388e3c;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.saiba-mais:hover {
+    color: #1b5e20;
+}
+
+.acao-destacada {
+    padding: 100px 0;
+    background-color: #e8f5e9;
+}
+
+.acao-destacada h2 {
+    font-size: 2.8em;
+    color: #388e3c;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.acao-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.acao-texto {
+    max-width: 500px;
+    text-align: left;
+}
+
+.acao-texto h3 {
+    font-size: 2em;
+    color: #388e3c;
+    margin-bottom: 20px;
+}
+
+.acao-texto p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.acao-imagem {
+    max-width: 400px;
+}
+
+.acao-imagem img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.inspiracao {
+    padding: 80px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.inspiracao h2 {
+    font-size: 2.8em;
+    color: #558b2f;
+    margin-bottom: 50px;
+}
+
+.cards-inspiracao {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #f1f8e9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card i {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #8bc34a;
+}
+
+.card h3 {
+    color: #43a047;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.ver-mais {
+    display: inline-block;
+    text-decoration: none;
+    color: #388e3c;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: color 0.3s ease;
+}
+
+.ver-mais:hover {
+    color: #1b5e20;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 960px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px;
+    }
+    .hero-content {
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+    .hero-image {
+        max-width: 100%;
+    }
+    .acao-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .acao-texto {
+        max-width: 100%;
+        margin-bottom: 30px;
+    }
+    .acao-imagem {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .pilares-grid, .cards-inspiracao {
+        grid-template-columns: 1fr;
+    }
+    .pilar {
+        text-align: center;
+    }
+}

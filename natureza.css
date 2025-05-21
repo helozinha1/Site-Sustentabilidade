@@ -1,0 +1,246 @@
+/* Estilos específicos para a página de Preservação da Natureza */
+.hero-natureza {
+    background: linear-gradient(135deg, #aed581 0%, #689f38 100%);
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.hero-natureza .hero-content {
+    max-width: 550px;
+    padding: 20px;
+    text-align: left;
+}
+
+.hero-natureza h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-natureza p {
+    font-size: 1.2em;
+    line-height: 1.7;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.hero-natureza .hero-image {
+    max-width: 450px;
+}
+
+.hero-natureza .hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.secao-natureza {
+    padding: 70px 0;
+    text-align: center;
+}
+
+.secao-natureza h2 {
+    font-size: 2.2em;
+    color: #558b2f;
+    margin-bottom: 40px;
+}
+
+/* Importância da Natureza */
+.importancia-natureza {
+    background-color: #f1f8e9;
+}
+
+.importancia-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.item {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.item i {
+    font-size: 2em;
+    color: #689f38;
+    margin-bottom: 15px;
+}
+
+.item h3 {
+    color: #558b2f;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.item p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ameaças à Natureza */
+.ameacas-natureza {
+    background-color: #ffe0b2;
+}
+
+.ameacas-natureza h2 {
+    color: #e65100;
+}
+
+.ameacas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.ameaca {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.ameaca i {
+    font-size: 2em;
+    margin-bottom: 15px;
+}
+
+.desmatamento i { color: #388e3c; }
+.poluicao i { color: #78909c; }
+.extincao i { color: #d32f2f; }
+.climaticas i { color: #fdd835; }
+
+.ameaca h3 {
+    color: #e65100;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.ameaca p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Ações pela Preservação */
+.acoes-natureza {
+    background-color: #c8e6c9;
+}
+
+.acoes-natureza h2 {
+    color: #388e3c;
+}
+
+.acoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 0 20px;
+    margin-top: 30px;
+}
+
+.acao {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.acao i {
+    font-size: 2em;
+    color: #43a047;
+    margin-bottom: 15px;
+}
+
+.acao h3 {
+    color: #388e3c;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.acao p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Call to Action */
+.call-to-action {
+    background-color: #81c784;
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.call-to-action h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.call-to-action .cta-buttons a {
+    display: inline-block;
+    padding: 14px 30px;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: background-color 0.3s ease;
+    font-size: 1.1em;
+}
+
+.call-to-action .cta-buttons .principal {
+    background-color: #1b5e20;
+    color: white;
+}
+
+.call-to-action .cta-buttons .principal:hover {
+    background-color: #003300;
+}
+
+.call-to-action .cta-buttons .secundario {
+    background-color: #a5d6a7;
+    color: #1b5e20;
+}
+
+.call-to-action .cta-buttons .secundario:hover {
+    background-color: #689f38;
+}
+
+/* Media Queries */
+@media (max-width: 960px) {
+    .hero-natureza {
+        flex-direction: column;
+        text-align: center;
+        padding: 80px 20px;
+    }
+    .hero-natureza .hero-content {
+        margin-bottom: 40px;
+        max-width: 100%;
+        text-align: center;
+    }
+    .hero-natureza .hero-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .importancia-grid, .ameacas-grid, .acoes-grid {
+        grid-template-columns: 1fr;
+    }
+}

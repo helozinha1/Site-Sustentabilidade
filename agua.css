@@ -1,0 +1,193 @@
+/* Estilos específicos para a página de Consciência da Água */
+.hero-agua {
+    background: linear-gradient(135deg, #e0f7fa 0%, #b2ebf2 100%);
+    color: #00695c;
+    padding: 80px 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+}
+
+.hero-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    max-width: 550px;
+    margin-left: 50px;
+}
+
+.hero-image img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.secao-agua {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.secao-agua h2 {
+    font-size: 2em;
+    color: #00897b;
+    margin-bottom: 30px;
+}
+
+.topicos-agua {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.topico {
+    background-color: #f1f8e9;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+.topico .icone {
+    font-size: 2em;
+    color: #4caf50;
+    margin-bottom: 15px;
+}
+
+.topico h3 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+.topico p {
+    color: #555;
+    line-height: 1.5;
+}
+
+.call-to-action {
+    background-color: #80cbc4;
+    color: white;
+    padding: 70px 0;
+}
+
+.call-to-action h2 {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.call-to-action p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.cta-buttons a {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-buttons .principal {
+    background-color: #00695c;
+    color: white;
+}
+
+.cta-buttons .principal:hover {
+    background-color: #004d40;
+}
+
+.cta-buttons .secundario {
+    background-color: #e0f2f1;
+    color: #00695c;
+}
+
+.cta-buttons .secundario:hover {
+    background-color: #b2dfdb;
+}
+
+/* Adaptações para telas menores */
+@media (max-width: 768px) {
+    .hero-agua {
+        flex-direction: column;
+        text-align: center;
+    }
+    .hero-image {
+        margin-left: 0;
+        margin-top: 30px;
+    }
+    .topicos-agua {
+        grid-template-columns: 1fr;
+    }
+    .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cta-buttons a {
+        margin: 10px 0;
+    }
+}
+/* ... outros estilos de agua.css ... */
+
+.conscientizacao {
+    background-color: #e0f7fa;
+}
+
+.conscientizacao h2 {
+    color: #00897b;
+}
+
+.formas-conscientizacao-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.forma {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+.forma i {
+    font-size: 2em;
+    color: #00acc1;
+    margin-bottom: 15px;
+}
+
+.forma h3 {
+    color: #00897b;
+    margin-bottom: 10px;
+}
+
+.forma p {
+    color: #555;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .formas-conscientizacao-grid {
+        grid-template-columns: 1fr;
+    }
+}
