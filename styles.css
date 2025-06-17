@@ -1,5 +1,6 @@
 /* styles.css - Estilos globais para o site EcoConexão */
 
+/* --- Estilos Base (Body e Container) --- */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
+    overflow-x: hidden; /* Evita rolagem horizontal indesejada */
 }
 
 .container {
@@ -22,7 +24,7 @@ header {
     box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
     position: sticky; /* Mantém o cabeçalho no topo ao rolar em desktop */
     top: 0;
-    z-index: 100;
+    z-index: 100; /* Garante que o header fique acima de outros elementos */
 }
 
 header .container {
@@ -33,12 +35,12 @@ header .container {
 
 .logo a {
     font-size: 1.8em;
-    color: #2e7d32;
+    color: #2e7d32; /* Verde EcoConexão */
     text-decoration: none;
     font-weight: bold;
 }
 
-/* Estilos da navegação principal (desktop) */
+/* --- Navegação Principal (Desktop) --- */
 .main-nav ul {
     list-style: none;
     padding: 0;
@@ -53,52 +55,63 @@ header .container {
 .main-nav ul li a {
     color: #555;
     text-decoration: none;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-color 0.3s ease;
     padding: 8px 10px;
     border-radius: 5px;
 }
 
 .main-nav ul li a:hover,
+.main-nav ul li a:focus, /* Adicionado para acessibilidade */
 .main-nav ul li a.active {
     color: #2e7d32;
-    /* background-color: #f0f8f0; */
+    background-color: #f0f8f0; /* Fundo suave ao passar o mouse/ativo */
 }
 
 .main-nav ul li a.active {
     font-weight: bold;
 }
 
-/* --- Main --- */
+/* --- Main Content Area --- */
 main {
     padding: 40px 0;
 }
 
-/* Estilos de botões gerais */
+/* --- Estilos de Botões Gerais --- */
 .button {
     display: inline-block;
     padding: 10px 20px;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
+    white-space: nowrap; /* Evita que o texto do botão quebre em várias linhas */
 }
 
 .button.principal {
-    background-color: #43a047;
+    background-color: #43a047; /* Verde mais escuro */
     color: white;
+    border: 1px solid #43a047; /* Borda da mesma cor */
 }
 
-.button.principal:hover {
-    background-color: #2e7d32;
+.button.principal:hover,
+.button.principal:focus { /* Adicionado para acessibilidade */
+    background-color: #2e7d32; /* Verde ainda mais escuro */
+    border-color: #2e7d32;
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
 }
 
 .button.secundario {
-    background-color: #e0f2f1;
+    background-color: #e0f2f1; /* Verde muito claro */
     color: #43a047;
+    border: 1px solid #e0f2f1; /* Borda da mesma cor */
 }
 
-.button.secundario:hover {
-    background-color: #b2dfdb;
+.button.secundario:hover,
+.button.secundario:focus { /* Adicionado para acessibilidade */
+    background-color: #b2dfdb; /* Verde um pouco mais escuro */
+    border-color: #b2dfdb;
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
 }
 
 .button.grande {
@@ -129,9 +142,11 @@ footer p {
     color: #f4f4f4;
     text-decoration: none;
     margin: 0 10px;
+    transition: text-decoration 0.3s ease;
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.footer-links a:focus { /* Adicionado para acessibilidade */
     text-decoration: underline;
 }
 
@@ -144,44 +159,55 @@ footer p {
     font-size: 1.5em;
     margin: 0 10px;
     text-decoration: none;
+    transition: opacity 0.3s ease, transform 0.2s ease;
 }
 
-.social-media a:hover {
+.social-media a:hover,
+.social-media a:focus { /* Adicionado para acessibilidade */
     opacity: 0.8;
+    transform: scale(1.1); /* Pequeno efeito de zoom */
 }
 
 .newsletter-signup {
     margin-top: 30px;
+    width: 100%; /* Garante que ocupe a largura disponível no container */
+    max-width: 500px; /* Limita a largura para melhor visualização em desktop */
 }
 
 .newsletter-signup h3 {
     margin-bottom: 10px;
+    color: #f4f4f4;
 }
 
 .newsletter-signup form {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Espaçamento entre o input e o botão */
     justify-content: center;
+    flex-wrap: wrap; /* Permite que os elementos quebrem a linha em telas menores */
 }
 
 .newsletter-signup input[type="email"] {
-    padding: 10px;
+    padding: 12px; /* Aumentado para melhor toque/visual */
     border: 1px solid #555;
     border-radius: 5px;
+    flex-grow: 1; /* Permite que o input preencha o espaço disponível */
+    min-width: 200px; /* Garante um tamanho mínimo para o input */
 }
 
 .newsletter-signup button[type="submit"] {
     background-color: #43a047;
     color: white;
     border: none;
-    padding: 10px 15px;
+    padding: 12px 20px; /* Aumentado para melhor toque/visual */
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.newsletter-signup button[type="submit"]:hover {
+.newsletter-signup button[type="submit"]:hover,
+.newsletter-signup button[type="submit"]:focus { /* Adicionado para acessibilidade */
     background-color: #2e7d32;
+    transform: translateY(-2px); /* Pequeno efeito de elevação */
 }
 
 /* --- Media Queries para Responsividade (Menu Mobile) --- */
@@ -199,14 +225,15 @@ footer p {
     border-width: 0;
 }
 
-/* Botão do menu mobile */
+/* Botão do menu mobile (hambúrguer) */
 .mobile-nav-toggle {
     display: none; /* Escondido por padrão em desktop */
     background: transparent;
     border: 0;
     cursor: pointer;
-    padding: 0; /* Removido padding direto para evitar sobreposição */
+    padding: 10px; /* Adicionado padding para a área de clique em mobile */
     z-index: 1000; /* Garante que fique acima de outros elementos */
+    position: relative; /* Para posicionamento do pseudo-elemento */
 }
 
 .hamburger,
@@ -217,7 +244,7 @@ footer p {
     height: 3px;
     width: 1.5em;
     border-radius: 2px;
-    transition: transform 0.3s ease; /* Animação ao abrir/fechar */
+    transition: transform 0.3s ease, background-color 0.3s ease; /* Animação ao abrir/fechar */
 }
 
 .hamburger::before {
@@ -233,6 +260,7 @@ footer p {
 /* Animação do ícone quando o menu está aberto */
 .nav-open .mobile-nav-toggle .hamburger {
     transform: rotate(45deg);
+    background-color: transparent; /* A linha do meio some */
 }
 
 .nav-open .mobile-nav-toggle .hamburger::before {
@@ -247,7 +275,7 @@ footer p {
 @media (max-width: 768px) {
     header {
         padding: 10px 0; /* Reduz o padding vertical */
-        position: fixed; /* Fixa o cabeçalho no topo */
+        position: fixed; /* Fixa o cabeçalho no topo em mobile */
         top: 0;
         left: 0;
         width: 100%;
@@ -268,13 +296,12 @@ footer p {
     }
 
     .logo a {
-        font-size: 1.2em; /* Reduz o tamanho da fonte do logo */
+        font-size: 1.2em; /* Reduz o tamanho da fonte do logo em mobile */
     }
 
     /* Mostra o botão do menu mobile */
     .mobile-nav-toggle {
         display: block;
-        padding: 10px; /* Adicionado padding aqui para a área de clique */
     }
 
     /* Esconde a navegação por padrão em mobile */
@@ -287,6 +314,7 @@ footer p {
         position: absolute; /* Posiciona o menu abaixo do header */
         top: 100%; /* Começa abaixo do header */
         left: 0;
+        z-index: 99; /* Fica abaixo do toggle, mas acima do conteúdo principal */
     }
 
     .main-nav ul {
@@ -329,14 +357,47 @@ footer p {
 
     .footer-links {
         margin-bottom: 20px;
+        display: flex; /* Para que os links fiquem em linha, se houver espaço */
+        flex-wrap: wrap; /* Permite quebrar linha se não houver espaço */
+        justify-content: center;
+    }
+
+    .footer-links a {
+        margin: 5px 10px; /* Ajusta a margem para evitar que fiquem muito grudados */
     }
 
     .newsletter-signup form {
         flex-direction: column;
-        align-items: stretch;
+        align-items: stretch; /* Estica os elementos para preencher a largura */
     }
 
     .newsletter-signup input[type="email"] {
         margin-bottom: 10px;
+        width: auto; /* Permite que o input se ajuste ao container */
+    }
+}
+
+/* --- Estilos para telas muito pequenas (ex: iPhones SE) --- */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px; /* Reduz o padding lateral em telas muito pequenas */
+    }
+
+    .logo a {
+        font-size: 1.1em; /* Reduz um pouco mais o logo */
+    }
+
+    main {
+        padding: 30px 0; /* Reduz um pouco o padding vertical do main */
+    }
+
+    .button.grande {
+        font-size: 1.1em;
+        padding: 12px 25px; /* Reduz um pouco o padding de botões grandes */
+    }
+
+    .newsletter-signup input[type="email"],
+    .newsletter-signup button[type="submit"] {
+        width: 100%; /* Garante que o input e o botão ocupem a largura total */
     }
 }
