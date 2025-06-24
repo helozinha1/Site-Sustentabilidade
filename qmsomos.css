@@ -1,0 +1,193 @@
+/* style.css */
+
+/* --- Estilos Gerais --- */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4; /* Fundo cinza claro */
+    color: #333; /* Cor de texto padrão */
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px; /* Limita a largura máxima para telas grandes */
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    border-radius: 8px;
+}
+
+h1, h2, h3 {
+    color: #2e8b57; /* Um verde escuro para títulos, similar ao do seu site */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* --- Estilos do Cabeçalho (Header) --- */
+.header {
+    background-color: #4CAF50; /* Um verde semelhante ao cabeçalho do seu site */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.header .logo h1 {
+    margin: 0;
+    padding: 0;
+    color: white; /* Garante que o título do logo seja branco */
+    font-size: 2.5em; /* Ajuste o tamanho da fonte do logo conforme necessário */
+}
+
+.header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+}
+
+.header nav ul li {
+    margin: 0 15px;
+}
+
+.header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 0; /* Adiciona um pouco de padding para área clicável */
+    transition: color 0.3s ease; /* Transição suave na cor */
+}
+
+.header nav ul li a:hover,
+.header nav ul li a.active { /* Adicione uma classe 'active' para a página atual */
+    color: #ccebcc; /* Um verde mais claro ao passar o mouse */
+}
+
+/* --- Estilos da Seção "Quem Somos" --- */
+
+.values-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Permite que os itens quebrem linha */
+    justify-content: center;
+    gap: 20px; /* Espaço entre os itens */
+    margin-top: 30px;
+}
+
+.values-list li {
+    background-color: #e6ffe6; /* Fundo verde muito claro */
+    border: 1px solid #ccebcc; /* Borda verde clara */
+    padding: 15px 20px;
+    border-radius: 5px;
+    flex: 1 1 calc(33% - 40px); /* Ocupa cerca de 1/3 da largura, subtraindo o gap */
+    box-sizing: border-box; /* Inclui padding e border na largura */
+    text-align: center;
+    font-weight: bold;
+    color: #2e8b57; /* Texto verde escuro */
+    min-width: 200px; /* Garante uma largura mínima para cada item */
+}
+
+/* --- Estilos da Equipe --- */
+.team-member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9; /* Fundo levemente cinza para cada membro */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+    flex-wrap: wrap; /* Permite que os elementos internos quebrem linha em telas pequenas */
+}
+
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; /* Torna a imagem circular */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+    margin-right: 20px;
+    border: 3px solid #4CAF50; /* Borda verde ao redor da imagem */
+    flex-shrink: 0; /* Impede que a imagem encolha */
+}
+
+.team-member-info {
+    flex-grow: 1; /* Permite que o texto preencha o espaço restante */
+}
+
+.team-member-info h3 {
+    margin: 0 0 5px 0;
+    color: #333;
+    text-align: left; /* Alinha o nome do membro à esquerda */
+}
+
+.team-member-info p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #555;
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+/* --- Estilos do Rodapé (Footer) --- */
+.footer {
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    background-color: #333; /* Fundo cinza escuro */
+    color: white;
+    font-size: 0.9em;
+}
+
+/* --- Media Queries para Responsividade --- */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Aumenta a largura em telas menores */
+        padding: 15px;
+    }
+
+    .header nav ul {
+        flex-direction: column; /* Itens do menu empilhados verticalmente */
+        align-items: center; /* Centraliza os itens */
+    }
+
+    .header nav ul li {
+        margin: 10px 0; /* Mais espaço entre os itens empilhados */
+    }
+
+    .values-list li {
+        flex: 1 1 calc(50% - 20px); /* 2 itens por linha em tablets */
+    }
+
+    .team-member {
+        flex-direction: column; /* Imagem e texto empilhados */
+        text-align: center;
+    }
+
+    .team-member img {
+        margin: 0 0 15px 0; /* Centraliza e adiciona margem abaixo da imagem */
+    }
+
+    .team-member-info h3,
+    .team-member-info p {
+        text-align: center; /* Centraliza o texto do membro */
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo h1 {
+        font-size: 2em;
+    }
+
+    .values-list li {
+        flex: 1 1 100%; /* Um item por linha em celulares */
+    }
+}
